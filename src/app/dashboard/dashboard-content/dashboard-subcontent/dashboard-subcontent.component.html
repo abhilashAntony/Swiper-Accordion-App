@@ -41,7 +41,7 @@
                               mat-raised-button
                               matTooltip="Click to start the server"
                               class="btn-start"
-                              (click)="updateStartButton(server)"
+                              (click)="updateStartButton(server); openSnackBar('started', server.name)"
                               [disabled]="server.startButton === 'disabled'"
                               color="accent">
                               start
@@ -50,7 +50,7 @@
                               mat-raised-button
                               matTooltip="Click to stop the server"
                               class="btn-stop"
-                              (click)="updateStopButton(server)"
+                              (click)="updateStopButton(server); openSnackBar('stopped', server.name)"
                               [disabled]="server.stopButton === 'disabled'"
                               color="warn">
                               stop

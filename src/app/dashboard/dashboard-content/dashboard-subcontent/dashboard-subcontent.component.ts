@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from '../../../config.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dashboard-subcontent',
@@ -7,8 +8,9 @@ import { ConfigService } from '../../../config.service';
   styleUrls: ['./dashboard-subcontent.component.css']
 })
 export class DashboardSubcontentComponent implements OnInit {
+  snackbarMessage: string;
   @Input() mainStack;
-  constructor(private configService: ConfigService) { }
+  constructor(private configService: ConfigService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -35,5 +37,13 @@ export class DashboardSubcontentComponent implements OnInit {
         console.log(response);
       }));
     }
+  }
+
+  // Function for displaying the snackbar
+  openSnackBar(message: string, serverName: string): void {
+    this.snackbarMessage = serverName + ' ' + message;
+    this.snackBar.open(this.snackbarMessage, 'Dismiss', {
+      duration: 2000
+    });
   }
 }

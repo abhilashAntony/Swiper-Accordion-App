@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PanelServiceService } from '../panel-service.service';
 import { SwiperComponent } from 'swiper/angular';
 
+// Swiper module for navigation through panels
 import SwiperCore, {
   Navigation,
 } from 'swiper/core';
