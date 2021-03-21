@@ -2,7 +2,7 @@
 
 ## Introduction
 
-An updated version of the previously submitted server-control demo app. The current version now includes angular material components.
+This updated version of the app replaces the accordion with a slider, implemented using the [Swiper](https://swiperjs.com/) package. This allows the expansion panels to be displayed on a single page, rather than one below the other in the accordion.
 
 ## Installation
 
