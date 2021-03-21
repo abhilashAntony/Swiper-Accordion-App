@@ -3,10 +3,16 @@ mat-drawer-container {
     height: 100%;
 }
 
-mat-drawer, mat-drawer-content {
+mat-drawer {
     padding: 16px;
 }
 
+mat-drawer-content {
+    background-color: #F5F5F5;
+}
+
 mat-drawer {
-    width: 40%;
+    width: 25vw;
+    min-width: 25vw;
+    border-radius: 5px;
 }

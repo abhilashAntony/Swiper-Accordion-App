@@ -1,5 +1,15 @@
 /* Styling for the dashboard-content component html */
 
+.swiper-main {
+    height: 100%;
+}
+
+.stack-main {
+    height: auto;
+    width: 75vw;
+    margin: auto;
+}
+
 /* h1, h2, h3, h4, h5 {
     text-align: center;
     color: #1EE1C9;

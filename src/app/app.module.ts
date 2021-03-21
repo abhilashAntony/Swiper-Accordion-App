@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from './config.service';
+import { SwiperModule } from 'swiper/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { DashboardLoaderComponent } from './dashboard/dashboard-loader/dashboard-loader.component';
@@ -27,7 +28,8 @@ import { DashboardSubcontentComponent } from './dashboard/dashboard-content/dash
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    SwiperModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

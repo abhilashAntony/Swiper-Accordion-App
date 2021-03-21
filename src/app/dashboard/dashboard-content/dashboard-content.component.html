@@ -1,19 +1,26 @@
 <!-- *ngFor directive iterates through the main stacks -->
 
-<mat-accordion class="accordion-main">
-  <mat-expansion-panel class="stack-main" *ngFor="let mainStack of mainStacks">
-    <mat-expansion-panel-header>
-      <!-- Display main stack (STACK 1 AND STACK 2) -->
-      <mat-panel-title>
-        {{mainStack.name | uppercase}} control panel
-      </mat-panel-title>
+<swiper class="swiper-main" [slidesPerView]="1"
+  [spaceBetween]="50"
+  [navigation]="true">
+  <ng-template swiperSlide
+  *ngFor="let mainStack of mainStacks">
+    <mat-expansion-panel
+    [expanded]="panelStatus"
+    class="stack-main">
+      <mat-expansion-panel-header>
+        <!-- Display main stack (STACK 1 AND STACK 2) -->
+        <mat-panel-title>
+          {{mainStack.name | uppercase}} control panel
+        </mat-panel-title>
 
-      <!-- Display main stack description -->
-      <mat-panel-description>
-        Control panel for {{ mainStack.name | lowercase }} servers
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    
-    <app-dashboard-subcontent [mainStack]="mainStack"></app-dashboard-subcontent>
-  </mat-expansion-panel>
-</mat-accordion>
+        <!-- Display main stack description -->
+        <mat-panel-description>
+          Control panel for {{ mainStack.name | lowercase }} servers
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <!-- All sub-stacks place inside app-dashboard component -->
+      <app-dashboard-subcontent [mainStack]="mainStack"></app-dashboard-subcontent>
+    </mat-expansion-panel>
+  </ng-template>
+</swiper>

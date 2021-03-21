@@ -1,9 +1,10 @@
-<!-- *ngFor directive iterates through the main stacks -->
+<!-- This component displays the drawer (sidenav) of the app -->
 <hr>
 
 <!-- Titles of the main stacks in uppercase (STACK 1 AND STACK 2) -->
 <mat-accordion>
-    <mat-expansion-panel *ngFor="let mainStack of mainStacks">
+    <mat-expansion-panel
+        *ngFor="let mainStack of mainStacks">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{ mainStack.name | uppercase }}
@@ -53,27 +54,3 @@
         </mat-accordion> 
     </mat-expansion-panel>
 </mat-accordion>
-<!-- 
-                    <ul class="expanded" *ngFor="let server of servers.children">
-                        <li
-                            [ngStyle]="{'color':server.startButton!=='enabled'?'#FBC200':'#808080'}">
-                            {{server.name}}
-                            <span *ngIf="server.startButton==='enabled'">(Offline)</span>
-                            <span *ngIf="server.stopButton==='enabled'">(Online)</span>
-                        </li>
-                    </ul>
-                </span>
-            </div>
-        </span>
-    </div>
-    <hr>
-</div> -->
-
-<!-- <mat-accordion>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title></mat-panel-title>
-            <mat-panel-description></mat-panel-description>
-        </mat-expansion-panel-header>
-    </mat-expansion-panel>
-</mat-accordion> -->
