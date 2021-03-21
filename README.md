@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This updated version of the app replaces the accordion with a slider. The slider was implemented using the [Swiper](https://swiperjs.com/) package. This allows the expansion panels to be displayed on a single page, rather than one below the other in the accordion.
+This updated version of the app replaces the accordion with a slider, implemented using the [Swiper](https://swiperjs.com/) package. This allows the expansion panels to be displayed on a single page, rather than one below the other in the accordion.
 
 ## Installation
 
