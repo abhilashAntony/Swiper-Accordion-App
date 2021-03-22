@@ -14,7 +14,7 @@ export class ServerComponentComponent implements OnInit {
   subscription: Subscription;
   @Input() mainStacks;
   constructor(private panelService: PanelServiceService,
-    private panelSelector: PanelSelectorService) { }
+              private panelSelector: PanelSelectorService) { }
 
   // Initialize panel status in panel-service
   ngOnInit(): void {
