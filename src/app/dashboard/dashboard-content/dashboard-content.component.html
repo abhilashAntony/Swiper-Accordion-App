@@ -2,7 +2,8 @@
 
 <swiper class="swiper-main" [slidesPerView]="1"
   [spaceBetween]="50"
-  [navigation]="true">
+  [navigation]="true"
+  #swiperSelector>
   <ng-template swiperSlide
   *ngFor="let mainStack of mainStacks">
     <mat-expansion-panel
@@ -24,3 +25,4 @@
     </mat-expansion-panel>
   </ng-template>
 </swiper>
+<button mat-raised-button (click)="slideToThis()">Click</button>

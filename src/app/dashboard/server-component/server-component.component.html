@@ -4,7 +4,8 @@
 <!-- Titles of the main stacks in uppercase (STACK 1 AND STACK 2) -->
 <mat-accordion>
     <mat-expansion-panel
-        *ngFor="let mainStack of mainStacks">
+        *ngFor="let mainStack of mainStacks"
+        (opened)="changeSlideIndex(mainStack.name)">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{ mainStack.name | uppercase }}

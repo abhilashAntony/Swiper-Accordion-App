@@ -43,7 +43,7 @@ export class DashboardSubcontentComponent implements OnInit {
   openSnackBar(message: string, serverName: string): void {
     this.snackbarMessage = serverName + ' ' + message;
     this.snackBar.open(this.snackbarMessage, 'Dismiss', {
-      duration: 2000
+      duration: 4000
     });
   }
 }
